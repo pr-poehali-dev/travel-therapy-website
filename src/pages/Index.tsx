@@ -1,46 +1,47 @@
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="w-full py-6 px-6 md:px-12">
+      <nav className="w-full py-4 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold text-foreground">
+          <div className="text-xl font-semibold text-foreground">
             Teach Travel Therapy
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            <a href="#about" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               About
             </a>
-            <a href="#community" className="text-foreground hover:text-primary transition-colors">
+            <a href="#community" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Community
             </a>
-            <a href="#recommendations" className="text-foreground hover:text-primary transition-colors">
+            <a href="#recommendations" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Recommendations
             </a>
-            <a href="#mentorship" className="text-foreground hover:text-primary transition-colors">
+            <a href="#mentorship" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Mentorship
             </a>
-            <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">
+            <a href="#testimonials" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Testimonials
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Contact
             </a>
             
             {/* Social Icons */}
-            <div className="flex items-center space-x-4 ml-6">
+            <div className="flex items-center space-x-3 ml-6 border-l border-muted pl-6">
               <a href="#" className="text-primary hover:text-accent transition-colors">
-                <Icon name="Music" size={20} />
+                <Icon name="Music" size={18} />
               </a>
               <a href="#" className="text-primary hover:text-accent transition-colors">
-                <Icon name="Instagram" size={20} />
+                <Icon name="Instagram" size={18} />
               </a>
               <a href="#" className="text-primary hover:text-accent transition-colors">
-                <Icon name="Users" size={20} />
+                <Icon name="Users" size={18} />
               </a>
             </div>
           </div>
@@ -48,145 +49,300 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-          Welcome to Teach Travel Therapy
-        </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-light">
-          We are so happy you are here – Taylor & Andrew
-        </p>
-        
-        {/* Navigation Links under Hero */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-16 text-sm md:text-base">
-          <a href="#about" className="text-foreground hover:text-primary transition-colors border-b border-transparent hover:border-primary">
-            About
-          </a>
-          <span className="text-muted-foreground">|</span>
-          <a href="#community" className="text-foreground hover:text-primary transition-colors border-b border-transparent hover:border-primary">
-            Community
-          </a>
-          <span className="text-muted-foreground">|</span>
-          <a href="#recommendations" className="text-foreground hover:text-primary transition-colors border-b border-transparent hover:border-primary">
-            Recommendations
-          </a>
-          <span className="text-muted-foreground">|</span>
-          <a href="#mentorship" className="text-foreground hover:text-primary transition-colors border-b border-transparent hover:border-primary">
-            Mentorship
-          </a>
-          <span className="text-muted-foreground">|</span>
-          <a href="#testimonials" className="text-foreground hover:text-primary transition-colors border-b border-transparent hover:border-primary">
-            Testimonials
-          </a>
-          <span className="text-muted-foreground">|</span>
-          <a href="#contact" className="text-foreground hover:text-primary transition-colors border-b border-transparent hover:border-primary">
-            Contact
-          </a>
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                Welcome to Teach Travel Therapy — we're Taylor & Andrew
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                From the Blue Ridge Mountains to the Pacific Northwest, travel therapy is our 
+                gateway to adventure — and now we're here to share it with you.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="bg-primary hover:bg-accent text-primary-foreground px-8 py-3">
+                Join the Circle Community
+              </Button>
+              <Button variant="outline" size="lg" className="px-8 py-3">
+                Explore Mentorship
+              </Button>
+            </div>
+            
+            <p className="text-sm text-muted-foreground">
+              Free to join • No recruiters • For PT/OT/SLP only
+            </p>
+          </div>
+          
+          <div className="relative">
+            <img 
+              src="/img/a0bc9c37-43e2-4f07-bb16-211bc2218f0b.jpg" 
+              alt="Taylor and Andrew in the Blue Ridge Mountains" 
+              className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
+            />
+          </div>
         </div>
+      </section>
 
-        {/* Main Text */}
-        <div className="max-w-4xl mx-auto">
-          <p className="text-lg md:text-xl text-foreground leading-relaxed mb-12">
-            Join the{' '}
-            <a href="#community" className="text-primary hover:text-accent underline">
-              'Teach Travel Therapy' community on Circle
-            </a>
-            , explore the only{' '}
-            <a href="#recommendations" className="text-primary hover:text-accent underline">
-              job board focused on quality over quantity
-            </a>
-            , participate in{' '}
-            <a href="#talks" className="text-primary hover:text-accent underline">
-              weekly Travel Therapy Talks every Tuesday and Thursday
-            </a>
-            , sign up for{' '}
-            <a href="#presentations" className="text-primary hover:text-accent underline">
-              free quarterly presentations
-            </a>
-            , and receive{' '}
-            <a href="#mentorship" className="text-primary hover:text-accent underline">
-              ongoing mentorship
-            </a>
-            .
+      {/* Mission Statement */}
+      <section className="w-full bg-secondary py-16 md:py-24">
+        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
+          <p className="text-lg md:text-xl text-foreground leading-relaxed">
+            At Teach Travel Therapy, we're redefining what it means to be a travel therapist. 
+            We know the challenges because we live them every day. Our mission: to give you the 
+            tools, opportunities, and community you need to not just survive — but <strong>thrive</strong>. 
+            From exclusive access to quality job opportunities and a supportive network, to weekly 
+            Travel Therapy Talks, quarterly deep-dives, and personalized mentorship, we're here 
+            to help you unlock your potential and build the lifestyle you've been dreaming of.
           </p>
         </div>
       </section>
 
-      {/* Mission Statement Section */}
-      <section className="w-full bg-secondary py-20">
+      {/* What You Get */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            What You Get
+          </h2>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card className="bg-secondary/30 border-none shadow-sm hover:shadow-md transition-shadow">
+            <CardContent className="p-6 text-center space-y-4">
+              <Icon name="Users" size={48} className="mx-auto text-primary" />
+              <h3 className="text-xl font-semibold text-foreground">Community</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Private discussions, bi-weekly live sessions, quarterly presentations.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-secondary/30 border-none shadow-sm hover:shadow-md transition-shadow">
+            <CardContent className="p-6 text-center space-y-4">
+              <Icon name="Briefcase" size={48} className="mx-auto text-primary" />
+              <h3 className="text-xl font-semibold text-foreground">Job Board</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                The only job board focused on quality over quantity.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-secondary/30 border-none shadow-sm hover:shadow-md transition-shadow">
+            <CardContent className="p-6 text-center space-y-4">
+              <Icon name="GraduationCap" size={48} className="mx-auto text-primary" />
+              <h3 className="text-xl font-semibold text-foreground">Mentorship</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                From free quick calls to 1:1 sessions and negotiation support.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-secondary/30 border-none shadow-sm hover:shadow-md transition-shadow">
+            <CardContent className="p-6 text-center space-y-4">
+              <Icon name="FileText" size={48} className="mx-auto text-primary" />
+              <h3 className="text-xl font-semibold text-foreground">Resources</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Guides, templates, and checklists for taxes, housing, and licensing.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+        
+        <div className="text-center mt-12">
+          <Button size="lg" className="bg-primary hover:bg-accent text-primary-foreground px-8 py-3">
+            Join the Circle Community
+          </Button>
+        </div>
+      </section>
+
+      {/* Why Us Story */}
+      <section className="w-full bg-secondary py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-              Our Mission
-            </h2>
-            <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-5xl mx-auto">
-              At Teach Travel Therapy, we're redefining what it means to be a travel therapist. 
-              Our mission is to equip you with the tools, opportunities, and community you need 
-              to not just survive—but thrive—in your career. From exclusive access to top-tier 
-              job opportunities and a supportive network of like-minded therapists, to weekly 
-              travel therapy talks, quarterly deep-dive presentations, and personalized mentorship 
-              every step of the way, we're here to help you unlock your full potential and help 
-              you live the lifestyle you've been dreaming of.
-            </p>
-            
-            <div className="mt-12">
-              <Button size="lg" className="bg-primary hover:bg-accent text-primary-foreground px-8 py-3">
-                Join Our Community
-              </Button>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="/img/558b0511-71c3-4971-9fc0-649ddafe9105.jpg" 
+                alt="Taylor and Andrew working together" 
+                className="rounded-2xl w-full h-[400px] object-cover shadow-lg"
+              />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Why Us
+              </h2>
+              <p className="text-lg text-foreground leading-relaxed">
+                We're Taylor and Andrew, a husband-and-wife duo who've been living the travel 
+                therapy lifestyle since 2022. From Virginia's mountains to the Sonoran Desert 
+                and beyond, we've turned this career into our adventure — and now, we've built 
+                a space where you can do the same.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                Safe, supportive, and all about thriving — without the noise or recruiter pressure.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-8 pt-4">
+                <div className="text-center sm:text-left">
+                  <div className="text-2xl font-bold text-primary">100+</div>
+                  <div className="text-sm text-muted-foreground">personal consultations</div>
+                </div>
+                <div className="text-center sm:text-left">
+                  <div className="text-2xl font-bold text-primary">$2400+</div>
+                  <div className="text-sm text-muted-foreground">average extra pay secured</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-secondary/50 rounded-lg">
-            <Icon name="Users" size={48} className="mx-auto mb-4 text-primary" />
-            <h3 className="text-xl font-semibold text-foreground mb-3">Community</h3>
-            <p className="text-muted-foreground">
-              Connect with like-minded travel therapists in our supportive Circle community
-            </p>
+      {/* Mentorship Preview */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Mentorship Preview
+          </h2>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Free Options</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <Icon name="Check" size={20} className="text-primary mt-0.5" />
+                <div>
+                  <div className="font-medium text-foreground">5-minute exploratory call</div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Icon name="Check" size={20} className="text-primary mt-0.5" />
+                <div>
+                  <div className="font-medium text-foreground">Bi-weekly drop-ins</div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Icon name="Check" size={20} className="text-primary mt-0.5" />
+                <div>
+                  <div className="font-medium text-foreground">Free quarterly presentations</div>
+                </div>
+              </div>
+            </div>
           </div>
           
-          <div className="text-center p-6 bg-secondary/50 rounded-lg">
-            <Icon name="Briefcase" size={48} className="mx-auto mb-4 text-primary" />
-            <h3 className="text-xl font-semibold text-foreground mb-3">Quality Jobs</h3>
-            <p className="text-muted-foreground">
-              Access our curated job board focused on quality opportunities over quantity
-            </p>
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Paid Options</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <Icon name="Star" size={20} className="text-primary mt-0.5" />
+                <div>
+                  <div className="font-medium text-foreground">1:1 presentation (80–100 min)</div>
+                  <div className="text-sm text-muted-foreground">$199</div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Icon name="Star" size={20} className="text-primary mt-0.5" />
+                <div>
+                  <div className="font-medium text-foreground">30-min 1:1 call</div>
+                  <div className="text-sm text-muted-foreground">$60</div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Icon name="Star" size={20} className="text-primary mt-0.5" />
+                <div>
+                  <div className="font-medium text-foreground">Contract negotiation support</div>
+                  <div className="text-sm text-muted-foreground">$100</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-8 p-4 bg-secondary/30 rounded-lg">
+          <p className="text-sm text-foreground text-center">
+            We never want finances to be the reason you miss out — scholarships available, 
+            email <a href="mailto:taylor@teachtraveltherapy.com" className="text-primary underline">
+              taylor@teachtraveltherapy.com
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="w-full bg-secondary py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              What Our Community Says
+            </h2>
           </div>
           
-          <div className="text-center p-6 bg-secondary/50 rounded-lg">
-            <Icon name="MessageCircle" size={48} className="mx-auto mb-4 text-primary" />
-            <h3 className="text-xl font-semibold text-foreground mb-3">Weekly Talks</h3>
-            <p className="text-muted-foreground">
-              Join our Travel Therapy Talks every Tuesday and Thursday for insights and tips
-            </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-background border-none shadow-sm">
+              <CardContent className="p-6 space-y-4">
+                <p className="text-foreground leading-relaxed">
+                  "Taylor made me feel safe to ask any question and helped me sign my first travel contract."
+                </p>
+                <div className="text-sm">
+                  <div className="font-medium text-foreground">Courtney, PT</div>
+                  <div className="text-muted-foreground">Indiana</div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-background border-none shadow-sm">
+              <CardContent className="p-6 space-y-4">
+                <p className="text-foreground leading-relaxed">
+                  "Transparent and supportive — we're now signing our first outpatient pediatrics contract."
+                </p>
+                <div className="text-sm">
+                  <div className="font-medium text-foreground">Reilly, PT</div>
+                  <div className="text-muted-foreground">New York</div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-background border-none shadow-sm">
+              <CardContent className="p-6 space-y-4">
+                <p className="text-foreground leading-relaxed">
+                  "With Taylor's guidance, I secured $2400 more on my contract."
+                </p>
+                <div className="text-sm">
+                  <div className="font-medium text-foreground">Dan, PT</div>
+                  <div className="text-muted-foreground">California</div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
           
-          <div className="text-center p-6 bg-secondary/50 rounded-lg">
-            <Icon name="GraduationCap" size={48} className="mx-auto mb-4 text-primary" />
-            <h3 className="text-xl font-semibold text-foreground mb-3">Mentorship</h3>
-            <p className="text-muted-foreground">
-              Receive personalized guidance and mentorship throughout your career journey
-            </p>
+          <div className="text-center mt-12">
+            <Button variant="outline" size="lg" className="px-8 py-3">
+              Read More Stories
+            </Button>
           </div>
-          
-          <div className="text-center p-6 bg-secondary/50 rounded-lg">
-            <Icon name="Calendar" size={48} className="mx-auto mb-4 text-primary" />
-            <h3 className="text-xl font-semibold text-foreground mb-3">Presentations</h3>
-            <p className="text-muted-foreground">
-              Attend our free quarterly deep-dive presentations on industry topics
-            </p>
-          </div>
-          
-          <div className="text-center p-6 bg-secondary/50 rounded-lg">
-            <Icon name="Star" size={48} className="mx-auto mb-4 text-primary" />
-            <h3 className="text-xl font-semibold text-foreground mb-3">Excellence</h3>
-            <p className="text-muted-foreground">
-              Tools and opportunities to help you unlock your full potential
-            </p>
-          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="max-w-4xl mx-auto px-6 md:px-12 py-16 md:py-24 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+          Ready to take the first step?
+        </h2>
+        
+        <Button size="lg" className="bg-primary hover:bg-accent text-primary-foreground px-8 py-3 mb-6">
+          Join the Circle Community
+        </Button>
+        
+        <div className="flex justify-center items-center gap-4 text-sm text-muted-foreground">
+          <a href="#" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <Icon name="Instagram" size={16} />
+            Instagram
+          </a>
+          <span>•</span>
+          <a href="#" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <Icon name="Music" size={16} />
+            TikTok
+          </a>
         </div>
       </section>
 
@@ -194,34 +350,22 @@ const Index = () => {
       <footer className="w-full bg-secondary py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-8">
-            <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8 text-sm md:text-base">
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">
-                About
-              </a>
-              <span className="text-muted-foreground">|</span>
-              <a href="#community" className="text-foreground hover:text-primary transition-colors">
-                Community
-              </a>
-              <span className="text-muted-foreground">|</span>
-              <a href="#recommendations" className="text-foreground hover:text-primary transition-colors">
-                Recommendations
-              </a>
-              <span className="text-muted-foreground">|</span>
-              <a href="#mentorship" className="text-foreground hover:text-primary transition-colors">
-                Mentorship
-              </a>
-              <span className="text-muted-foreground">|</span>
-              <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">
-                Testimonials
-              </a>
-              <span className="text-muted-foreground">|</span>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-                Contact
-              </a>
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8 text-sm">
+              <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
+              <span className="text-muted-foreground">•</span>
+              <a href="#community" className="text-foreground hover:text-primary transition-colors">Community</a>
+              <span className="text-muted-foreground">•</span>
+              <a href="#recommendations" className="text-foreground hover:text-primary transition-colors">Recommendations</a>
+              <span className="text-muted-foreground">•</span>
+              <a href="#mentorship" className="text-foreground hover:text-primary transition-colors">Mentorship</a>
+              <span className="text-muted-foreground">•</span>
+              <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">Testimonials</a>
+              <span className="text-muted-foreground">•</span>
+              <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
             </div>
           </div>
           
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-foreground">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm mb-8">
             <div className="flex items-center gap-2">
               <Icon name="Mail" size={16} />
               <span className="font-medium">Taylor:</span>
@@ -238,7 +382,8 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="text-center mt-8 text-sm text-muted-foreground">
+          <div className="text-center text-xs text-muted-foreground border-t border-muted pt-8">
+            <p className="mb-2">Community is for PT/OT/SLP only. Recruiters — thank you, but this space is just for therapists.</p>
             <p>&copy; 2024 Teach Travel Therapy. All rights reserved.</p>
           </div>
         </div>
